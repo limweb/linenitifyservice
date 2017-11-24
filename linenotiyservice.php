@@ -14,7 +14,7 @@ class Linenoservice  {
 	private $error;
 
 	public function __construct(){
-	 	$this->redirect_uri =$_SERVER['HTTP_HOST'].'/callback';
+	 	$this->redirect_uri =$_SERVER['HTTP_HOST'].'index.php/callback';
 		if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') { //HTTPS } 
 			$this->redirect_uri = 'https://'.$this->redirect_uri;
 		} else {
@@ -105,7 +105,7 @@ class Linenoservice  {
 
 	private function sends(){
 	 echo '
-		<form action="/sends" method="POST" accept-charset="utf-8">
+		<form action="index.php/sends" method="POST" accept-charset="utf-8">
 		<input type="message" name="message"  placeholder="ข้อควาที่จะส่งถึงกลุ่ม">
 		<input type="submit" name="submit" value="ส่งข้อความ">
 		</form>';
