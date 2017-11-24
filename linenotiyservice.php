@@ -14,7 +14,7 @@ class Linenoservice  {
 	private $error;
 
 	public function __construct(){
-	 	$this->redirect_uri =$_SERVER['HTTP_HOST'].'index.php/callback';
+	 	$this->redirect_uri =$_SERVER['HTTP_HOST'].'/index.php/callback';
 		if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') { //HTTPS } 
 			$this->redirect_uri = 'https://'.$this->redirect_uri;
 		} else {
